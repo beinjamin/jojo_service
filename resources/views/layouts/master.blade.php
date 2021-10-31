@@ -14,7 +14,7 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-    <x-topnav />
+
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
@@ -39,7 +39,7 @@
 
 
       <!-- Sidebar Menu -->
-      <x-menu />
+
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -63,7 +63,7 @@
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
-  <x-sidebar />
+
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->

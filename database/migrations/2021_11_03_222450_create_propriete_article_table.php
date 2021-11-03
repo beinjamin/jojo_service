@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProprieteTable extends Migration
+class CreateProprieteArticleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateProprieteTable extends Migration
      */
     public function up()
     {
-        Schema::create('propriete', function (Blueprint $table) {
+        Schema::create('propriete_article', function (Blueprint $table) {
             $table->id();
-            $table->string("nom");
-            $table->boolean("estObligatoir")->default(1);
+            $table->string("estObligatoire")->default(1);
+            $table->timestamps();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateProprieteTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('propriete');
+        Schema::dropIfExists('propriete_article');
     }
 }

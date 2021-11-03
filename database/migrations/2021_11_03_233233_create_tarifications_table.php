@@ -15,6 +15,7 @@ class CreateTarificationsTable extends Migration
     {
         Schema::create('tarifications', function (Blueprint $table) {
             $table->id();
+            $table->double("prix");
             $table->timestamps();
         });
     }

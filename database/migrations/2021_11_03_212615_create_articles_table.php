@@ -15,6 +15,10 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string("nom");
+            $table->string("");
+            $table->string("imageUrl")->nullable();
+            $table->boolean("estDisponible")->default(1);
             $table->timestamps();
         });
     }

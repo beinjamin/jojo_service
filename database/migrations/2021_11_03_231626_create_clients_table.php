@@ -27,6 +27,7 @@ class CreateClientsTable extends Migration
             $table->string("téléphone1");
             $table->string("téléphone2");
             $table->string("pieceIdentité");
+            $table->string("noPieceIdentité");
             $table->timestamps();
         });
     }

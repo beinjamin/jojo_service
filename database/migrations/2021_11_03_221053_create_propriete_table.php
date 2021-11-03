@@ -17,7 +17,6 @@ class CreateProprieteTable extends Migration
             $table->id();
             $table->string("nom");
             $table->boolean("estObligatoir")->default(1);
-            $table->timestamps();
         });
     }
 

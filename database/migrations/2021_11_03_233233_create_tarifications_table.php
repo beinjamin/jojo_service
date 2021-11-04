@@ -16,9 +16,11 @@ class CreateTarificationsTable extends Migration
         Schema::create('tarifications', function (Blueprint $table) {
             $table->id();
             $table->double("prix");
-            $table->foreignId("duree_location_Id")->constrained("duree_locations");
+            $table->foreignId("duree_location_Id")->constrained();
+            $table->foreignId("article_id");
             $table->timestamps();
         });
+        schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -28,6 +30,9 @@ class CreateTarificationsTable extends Migration
      */
     public function down()
     {
+        Schema::table('tarifications', function (Blueprint $table) {
+            $table->dropForeign(["duree_location_id", "article_id"]);
+        });
         Schema::dropIfExists('tarifications');
     }
 }

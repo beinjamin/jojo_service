@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProprieteArticleTable extends Migration
+class CreateProprieteArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreateProprieteArticleTable extends Migration
      */
     public function up()
     {
-        Schema::create('propriete_article', function (Blueprint $table) {
+        Schema::create('propriete_articles', function (Blueprint $table) {
             $table->id();
-            $table->string("estObligatoire")->default(1);
-            $table->foreignId("type_article_id");
+            $table->string("nom");
+            $table->boolean("estObligatoire")->default(1);
+            $table->foreignId("type_article_id")->constrained();
         });
         Schema::enableForeignKeyConstraints();
     }
-
     /**
      * Reverse the migrations.
      *
@@ -28,9 +28,10 @@ class CreateProprieteArticleTable extends Migration
      */
     public function down()
     {
-        Schema::table('propriete_article', function (Blueprint $table) {
+        Schema::table('propriete_articles', function (Blueprint $table) {
             $table->dropForeign("type_article_id");
         });
-        Schema::dropIfExists('propriete_article');
+
+        Schema::dropIfExists('propriete_articles');
     }
 }

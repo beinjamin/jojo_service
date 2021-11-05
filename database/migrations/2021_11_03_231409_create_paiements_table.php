@@ -17,7 +17,6 @@ class CreatePaiementsTable extends Migration
             $table->id();
             $table->double("montantPaye");
             $table->dateTime("datePaiement");
-            $table->timestamps();
         });
     }
 

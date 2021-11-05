@@ -14,9 +14,10 @@ class CreateArticleProprieteTable extends Migration
     public function up()
     {
         Schema::create('article_propriete', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->foreignId("article_id");
+            $table->foreignId("article_propriete_id");
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -26,6 +27,10 @@ class CreateArticleProprieteTable extends Migration
      */
     public function down()
     {
+        Schema::table('article_propriete', function (Blueprint $table) {
+            $table->dropForeign("article_id");
+            $table->dropForeign("article_propriete_id");
+        });
         Schema::dropIfExists('article_propriete');
     }
 }

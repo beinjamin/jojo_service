@@ -14,9 +14,10 @@ class CreateUserPermissionTable extends Migration
     public function up()
     {
         Schema::create('user_permission', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->foreignId("user_id");
+            $table->foreignId("permission_id");
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -26,6 +27,10 @@ class CreateUserPermissionTable extends Migration
      */
     public function down()
     {
+        Schema::table('user_permission', function (Blueprint $table) {
+            $table->dropForeign("user_id");
+            $table->dropForeign("permission_id");
+        });
         Schema::dropIfExists('user_permission');
     }
 }

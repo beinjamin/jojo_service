@@ -16,8 +16,9 @@ class CreateProprieteArticleTable extends Migration
         Schema::create('propriete_article', function (Blueprint $table) {
             $table->id();
             $table->string("estObligatoire")->default(1);
-            $table->timestamps();
+            $table->foreignId("type_article_id");
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -27,6 +28,9 @@ class CreateProprieteArticleTable extends Migration
      */
     public function down()
     {
+        Schema::table('propriete_article', function (Blueprint $table) {
+            $table->dropForeign("type_article_id");
+        });
         Schema::dropIfExists('propriete_article');
     }
 }

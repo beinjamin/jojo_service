@@ -17,7 +17,10 @@ class CreatePaiementsTable extends Migration
             $table->id();
             $table->double("montantPaye");
             $table->dateTime("datePaiement");
+            $table->foreignId("user_id");
+            $table->foreignId("location_id");
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -27,6 +30,9 @@ class CreatePaiementsTable extends Migration
      */
     public function down()
     {
+        Schema::table('paiements', function (Blueprint $table) {
+            $table->dropForeign(["user_id", "location_id"]);
+        });
         Schema::dropIfExists('paiements');
     }
 }

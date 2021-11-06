@@ -15,7 +15,7 @@ class TypeArticleTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('type_article')->insert([
+        DB::table('type_articles')->insert([
             ["nom" => "voiture"],
             ["nom" => "Immobilier"],
             ["nom" => "Appareil Electroniques"],

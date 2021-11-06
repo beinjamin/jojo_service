@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class TypeArticleTableSeeder extends Seeder
 {
@@ -14,5 +15,12 @@ class TypeArticleTableSeeder extends Seeder
     public function run()
     {
         //
+        DB::table('type_article')->insert([
+            ["nom" => "voiture"],
+            ["nom" => "Immobilier"],
+            ["nom" => "Appareil Electroniques"],
+            ["nom" => "Salle"],
+
+        ]);
     }
 }

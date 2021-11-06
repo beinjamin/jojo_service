@@ -20,6 +20,7 @@ class ArticleFactory extends Factory
             "nom" => $this->fake->lastName,
             "noSerie" => $this->fake->swiftBicNumber,
             "imageUrl" => $this->faker->imageUrl(),
+            "type_article_id" => rand(1, 10),
             "estDisponible" => rand(0, 1),
         ];
     }

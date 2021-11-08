@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Client;
 use App\Models\Article;
 use Illuminate\Database\Seeder;
 

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class StatutLocationTableSeeder extends Seeder
 {
@@ -13,6 +14,10 @@ class StatutLocationTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table("statut_locations")->insert([
+            ["nom" => "En attente"],
+            ["nom" => "En cours"],
+            ["nom" => "Terminée"],
+        ]);
     }
 }

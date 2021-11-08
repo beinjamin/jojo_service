@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(TypeArticleTableSeeder::class);
-        Article::factory(45)->create();
+        Article::factory(100)->create();
+        Client::factory(100)->create();
     }
 }

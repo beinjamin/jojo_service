@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string("noSerie");
             $table->string("imageUrl")->nullable();
             $table->boolean("estDisponible")->default(1);
-            $table->foreignId("type_article_id");
+            $table->foreignId("type_article_id")->constrained();
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();

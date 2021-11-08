@@ -19,15 +19,15 @@ class CreateClientsTable extends Migration
             $table->string("prenom");
             $table->date("dateNaissance");
             $table->string("lieuNaissance");
-            $table->char("sex");
+            $table->char("sexe");
             $table->string("ville");
-            $table->string("nationalié");
+            $table->string("nationalie");
             $table->date("pays");
             $table->string("adresse");
-            $table->string("téléphone1");
-            $table->string("téléphone2")->nullable();
-            $table->string("pieceIdentité");
-            $table->string("noPieceIdentité");
+            $table->string("telephone1");
+            $table->string("telephone2")->nullable();
+            $table->string("pieceIdentite");
+            $table->string("noPieceIdentite");
             $table->timestamps();
         });
     }

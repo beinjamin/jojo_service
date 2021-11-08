@@ -20,5 +20,11 @@ class DatabaseSeeder extends Seeder
         $this->call(TypeArticleTableSeeder::class);
         Article::factory(100)->create();
         Client::factory(100)->create();
+
+
+        $this->call(RoleTableSeeder::class);
+        $this->call(StatutLocationTableSeeder::class);
+        $this->call(PermissionTableSeeder::class);
+        $this->call(DureeLocationTableSeeder::class);
     }
 }

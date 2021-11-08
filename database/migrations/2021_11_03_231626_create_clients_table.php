@@ -21,7 +21,7 @@ class CreateClientsTable extends Migration
             $table->string("lieuNaissance");
             $table->char("sexe");
             $table->string("ville");
-            $table->string("nationalie");
+            $table->string("nationalite");
             $table->date("pays");
             $table->string("adresse");
             $table->string("telephone1");

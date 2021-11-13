@@ -12,4 +12,9 @@ class Article extends Model
     public $fillable = [
         "nom", "noSerie", "type_article_id", "imageUrl"
     ];
+
+    public function type()
+    {
+        $this->belongsTo(TypeArticle::class);
+    }
 }

@@ -20,4 +20,8 @@ class Location extends Model
     {
         return $this->belongsTo(StatutLocation::class, "statut_location_id", "id");
     }
+    public function paiement()
+    {
+        return $this->hasMany(Paiement::class);
+    }
 }

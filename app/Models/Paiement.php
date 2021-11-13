@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Location extends Model
+class Paiement extends Model
 {
     use HasFactory;
     public function user()
     {
         return $this->belongsTo(User::class);
     }
-    public function client()
+    public function location()
     {
-        return $this->belongsTo(Client::class);
-    }
-    public function statut()
-    {
-        return $this->belongsTo(StatutLocation::class, "statut_location_id", "id");
+        return $this->belongsTo(Location::class);
     }
 }

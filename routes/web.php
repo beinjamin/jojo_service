@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/articles', function () {
-    return Article::paginate(5);
+    return Article::with("type")->paginate(5);
 });
 Route::get('/types', function () {
-    return TypeArticle::paginate(5);
+    return TypeArticle::with("articles")->paginate(5);
 });

@@ -10,8 +10,8 @@ class TypeArticle extends Model
     use HasFactory;
     protected $table = "type_articles";
 
-    public function type()
+    public function articles()
     {
-        $this->hasMany(Article::class);
+        return $this->hasMany(Article::class);
     }
 }

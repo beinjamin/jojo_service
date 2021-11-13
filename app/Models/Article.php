@@ -15,6 +15,6 @@ class Article extends Model
 
     public function type()
     {
-        $this->belongsTo(TypeArticle::class);
+        return $this->belongsTo(TypeArticle::class, "type_article_id", "id");
     }
 }

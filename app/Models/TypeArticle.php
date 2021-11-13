@@ -9,4 +9,9 @@ class TypeArticle extends Model
 {
     use HasFactory;
     protected $table = "type_articles";
+
+    public function type()
+    {
+        $this->hasMany(Article::class);
+    }
 }

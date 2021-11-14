@@ -16,16 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/articles', function () {
-    return Article::with("type")->paginate(5);
-});
-Route::get('/types', function () {
-    return TypeArticle::with("articles")->paginate(5);
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

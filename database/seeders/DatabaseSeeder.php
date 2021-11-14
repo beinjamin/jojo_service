@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Client;
 use App\Models\Article;
 use Illuminate\Database\Seeder;
@@ -18,8 +19,10 @@ class DatabaseSeeder extends Seeder
     {
 
         $this->call(TypeArticleTableSeeder::class);
-        Article::factory(100)->create();
-        Client::factory(100)->create();
+        Article::factory(10)->create();
+        Client::factory(10)->create();
+        User::factory(10)->create();
+
 
 
         $this->call(RoleTableSeeder::class);

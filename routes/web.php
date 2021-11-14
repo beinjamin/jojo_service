@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\Article;
-use App\Models\TypeArticle;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 

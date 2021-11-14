@@ -25,4 +25,8 @@ class Article extends Model
     {
         return $this->belongsToMany(Location::class, "article_location", "article_id", "location_id");
     }
+    public function proprietes()
+    {
+        return $this->belongsToMany(ProprieteArticle::class, "article_location", "article_id", "location_id");
+    }
 }

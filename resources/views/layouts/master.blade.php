@@ -1,4 +1,21 @@
-<  <!-- /.navbar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Starter</title>
+
+    <link rel="stylesheet" href="{{mix("css/app.css")}}" />
+
+    @livewireStyles
+
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+    <x-topnav />
+  <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -15,7 +32,7 @@
               <img src="{{asset('images/user1-128x128.jpg')}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
         </div>
         <div class="info">
-          <a href="#" class="d-block"></a>
+          <a href="#" class="d-block">{{ userFullName() }}</a>
         </div>
       </div>
 

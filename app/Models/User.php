@@ -58,4 +58,9 @@ class User extends Authenticatable
     {
         return $this->roles()->where("name", $role)->first() !== null;
     }
+
+    public function hasAnyRoles($roles)
+    {
+        return $this->roles()->where("name", $roles)->first() !== null;
+    }
 }

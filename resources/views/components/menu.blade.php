@@ -11,7 +11,7 @@
             </a>
           </li>
 
-
+          @can("manager")
         <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -35,7 +35,9 @@
               </li>
             </ul>
         </li>
+         @endcan
 
+        @can("admin")
 
 
         <li class="nav-item ">
@@ -97,7 +99,9 @@
             </ul>
         </li>
 
+ @endcan
 
+        @can("employe")
 
         <li class="nav-header">LOCATION</li>
         <li class="nav-item">
@@ -126,7 +130,7 @@
                 </p>
             </a>
         </li>
-
+ @endcan
 
         </ul>
       </nav>

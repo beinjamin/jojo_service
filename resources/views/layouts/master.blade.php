@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Jaures Services Vo.1 | Starter</title>
 
     <link rel="stylesheet" href="{{mix("css/app.css")}}" />
 
@@ -22,7 +22,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <span class="brand-text font-weight-bold" style="font-size: 1.3em;"><b>YBLTD</b></span>
+      <span class="brand-text font-weight-bold" style="font-size: 1.3em;"><b>Jaures Services</b></span>
     </a>
 
     <!-- Sidebar -->

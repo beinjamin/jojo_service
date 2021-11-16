@@ -3,7 +3,7 @@
 @section('container')
 <div class="login-box" style="width:700px;">
   <div class="login-logo">
-    <a href="#" style="color: #b3b6b9; font-size: 1.8em;"><b style="font-weight:bold;">MANAGEMENT</b>CORPORATE v.1</a>
+    <a href="#" style="color: #b3b6b9; font-size: 1.8em;"><b style="font-weight:bold;">Jaures</b>Services v0.1</a>
      <hr/>
   </div>
   <!-- /.login-logo -->

@@ -30,8 +30,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PermissionTableSeeder::class);
         $this->call(DureeLocationTableSeeder::class);
 
+
         User::find(1)->roles()->attach(1);
-        User::find(2)->roles()->attach(1);
+        User::find(2)->roles()->attach(2);
         User::find(3)->roles()->attach(3);
         User::find(4)->roles()->attach(4);
     }

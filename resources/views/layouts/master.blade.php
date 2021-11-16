@@ -74,7 +74,7 @@
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2021 <a href="https://adminlte.io">Codeurspassionnes.com</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="https://www.linkedin.com/in/jaures-beinjamin-fotsing-297069211/">Jaures Beinjamin Fotsing</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

@@ -54,4 +54,8 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Permission::class, "user_permission", "user_id", "permission_id");
     }
+    public function hasRole($role)
+    {
+        return $this->roles()->where("name", $role)->first() !== null;
+    }
 }

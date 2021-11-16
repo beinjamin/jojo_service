@@ -8,7 +8,7 @@
 
     <h3 class="profile-username text-center ellipsis">{{ userFullName() }} </h3>
 
-    <p class="text-muted text-center"></p>
+    <p class="text-muted text-center">{{getRolesName()}}</p>
 
     <ul class="list-group bg-dark mb-3">
         <li class="list-group-item">

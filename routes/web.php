@@ -17,6 +17,24 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::groupe([
+    "middleware" => ["auth", "auth.admin"],
+    "as" => "admin"
+
+], function () {
+
+    Route::groupe([
+        "prefix" => "habilitations",
+        'as' => 'habilitations.'
+
+    ], function () {
+        Route::get("/utilisateurs", Utilisateurs::class)->name("users.index");
+    });
+});
+
+
+
 Route::get('/habilitations/utilisateurs', [App\Http\Controllers\UserController::class, 'index'])
     ->name('utilisateurs')
     ->middleware("auth.admin");

@@ -18,18 +18,18 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::groupe([
+Route::group([
     "middleware" => ["auth", "auth.admin"],
     "as" => "admin"
 
 ], function () {
 
-    Route::groupe([
+    Route::group([
         "prefix" => "habilitations",
         'as' => 'habilitations.'
 
     ], function () {
-        Route::get("/utilisateurs", Utilisateurs::class)->name("users.index");
+        Route::get("/utilisateurs",[UserController::class, "index"]->name("users.index");
     });
 });
 

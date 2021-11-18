@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -17,4 +18,24 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/habilitations/utilisateurs', [App\Http\Controllers\UserController::class, 'index'])->name('utilisateurs');
+
+Route::group([
+    "middleware" => ["auth", "auth.admin"],
+    "as" => "admin"
+
+], function () {
+
+    Route::group([
+        "prefix" => "habilitations",
+        'as' => 'habilitations.'
+
+    ], function () {
+        Route::get("/utilisateurs", [UserController::class])->name("users.index");
+    });
+});
+
+
+
+Route::get('/habilitations/utilisateurs', [App\Http\Controllers\UserController::class, 'index'])
+    ->name('utilisateurs')
+    ->middleware("auth.admin");

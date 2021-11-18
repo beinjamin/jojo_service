@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,7 +30,7 @@ Route::group([
         'as' => 'habilitations.'
 
     ], function () {
-        Route::get("/utilisateurs",[UserController::class, "index"]->name("users.index");
+        Route::get("/utilisateurs", [UserController::class])->name("users.index");
     });
 });
 

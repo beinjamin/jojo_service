@@ -51,7 +51,7 @@
             <ul class="nav nav-treeview">
               <li class="nav-item ">
                 <a
-                href="{{ route('admin.habilitations.users.index')}}"
+                href="{{ route('utilisateurs')}}"
                 class="nav-link "
                 >
                   <i class=" nav-icon fas fa-users-cog"></i>

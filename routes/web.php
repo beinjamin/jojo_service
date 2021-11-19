@@ -29,7 +29,7 @@ Route::group([
         "prefix" => "habilitations",
         'as' => 'habilitations.'
     ], function () {
-        Route::get("/utilisateurs", Utilisateurs::class)->name("users.index");
+        Route::get("/utilisateurs", [UserController::class, "index"])->name("users.index");
         //Route::get("/rolesetpermissions", [UserController::class, "index"])->name("rolespermissions.index");
         //
     });

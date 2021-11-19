@@ -33,9 +33,3 @@ Route::group([
         Route::get("/utilisateurs", [UserController::class])->name("users.index");
     });
 });
-
-
-
-Route::get('/habilitations/utilisateurs', [App\Http\Controllers\UserController::class, 'index'])
-    ->name('utilisateurs')
-    ->middleware("auth.admin");

@@ -41,7 +41,7 @@
 
 
         <li class="nav-item ">
-             <a href="" class="nav-link active">
+             <a href="" class="nav-link" >
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>
                 Habilitations
@@ -52,7 +52,7 @@
               <li class="nav-item ">
                 <a
                 href="{{ route('admin.habilitations.users.index')}}"
-                class="nav-link active"
+                class="nav-link "
                 >
                   <i class=" nav-icon fas fa-users-cog"></i>
                   <p>Utilisateurs</p>

@@ -40,8 +40,8 @@
         @can("admin")
 
 
-        <li class="nav-item ">
-             <a href="" class="nav-link" >
+        <li class="nav-item menu-open">
+             <a href="" class="nav-link active" >
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>
                 Habilitations
@@ -51,8 +51,8 @@
             <ul class="nav nav-treeview">
               <li class="nav-item ">
                 <a
-                href="{{ route('utilisateurs')}}"
-                class="nav-link "
+                href="{{ route('admin.habilitations.users.index') }}"
+                class="nav-link active "
                 >
                   <i class=" nav-icon fas fa-users-cog"></i>
                   <p>Utilisateurs</p>

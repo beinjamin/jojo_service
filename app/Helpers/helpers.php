@@ -6,9 +6,13 @@ function userFullName()
     return auth()->user()->prenom . "" . auth()->user()->nom;
 }
 
-function setMenuOpen(){
+function setMenuOpen($route)
+{
 
-    if(request()->route()->name())
+    if (request()->route()->name() === $route) {
+        return "menu-open";
+    }
+    return "";
 }
 
 function getRolesName()

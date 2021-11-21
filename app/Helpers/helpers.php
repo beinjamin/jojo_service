@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 
 function userFullName()
 {
@@ -13,6 +15,10 @@ function setMenuOpen($route)
         return "menu-open";
     }
     return "";
+}
+function contains($container, $contenu)
+{
+    return Str::contains($container, $contenu);
 }
 
 function getRolesName()

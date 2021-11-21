@@ -40,7 +40,7 @@
         @can("admin")
 
 
-        <li class="nav-item menu-open">
+        <li class="nav-item {{  setMenuOpen  }}">
              <a href="" class="nav-link active" >
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>

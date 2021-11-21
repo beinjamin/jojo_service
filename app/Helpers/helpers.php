@@ -9,7 +9,7 @@ function userFullName()
 function setMenuOpen($route)
 {
 
-    if (request()->route()->name() === $route) {
+    if (request()->route()->getname() === $route) {
         return "menu-open";
     }
     return "";

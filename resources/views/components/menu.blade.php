@@ -52,7 +52,7 @@
               <li class="nav-item ">
                 <a
                 href="{{ route('admin.habilitations.users.index') }}"
-                class="nav-link active "
+                class="nav-link {{ setMenuActive('admin.habilitations.users.index') }} "
                 >
                   <i class=" nav-icon fas fa-users-cog"></i>
                   <p>Utilisateurs</p>

@@ -8,12 +8,12 @@ function userFullName()
     return auth()->user()->prenom . "" . auth()->user()->nom;
 }
 
-function setMenuOpen($route)
+function setMenuClass($route, $classe)
 {
     $routeActuel = request()->route()->getName();
 
     if (contains($routeActuel, $route)) {
-        return "menu-open";
+        return "$classe";
     }
     return "";
 }

@@ -8,6 +8,6 @@ class Utilisateurs extends Component
 {
     public function render()
     {
-        return view('livewire.utilisateurs');
+        return view('livewire.utilisateurs.index');
     }
 }

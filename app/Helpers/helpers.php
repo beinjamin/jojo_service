@@ -8,6 +8,9 @@ function userFullName()
     return auth()->user()->prenom . "" . auth()->user()->nom;
 }
 
+
+
+
 function setMenuClass($route, $classe)
 {
     $routeActuel = request()->route()->getName();
@@ -17,10 +20,45 @@ function setMenuClass($route, $classe)
     }
     return "";
 }
+
+
+
+function setMenuActive($route)
+{
+    $routeActuel = request()->route()->getName();
+
+    if ($routeActuel == $route) {
+        return "active";
+    }
+    return "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function contains($container, $contenu)
 {
     return Str::contains($container, $contenu);
 }
+
+
+
+
+
 
 function getRolesName()
 {

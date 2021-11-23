@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Utilisateurs;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,7 @@ Route::group([
         "prefix" => "habilitations",
         'as' => 'habilitations.'
     ], function () {
-        Route::get("/utilisateurs", [UserController::class, "index"])->name("users.index");
+        Route::get("/utilisateurs",  Utilisateurs::class)->name("users.index");
         //Route::get("/rolesetpermissions", [UserController::class, "index"])->name("rolespermissions.index");
 
 

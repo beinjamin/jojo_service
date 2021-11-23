@@ -40,8 +40,8 @@
         @can("admin")
 
 
-        <li class="nav-item {{  setMenuOpen ('admin.habilitations.') }}">
-             <a href="" class="nav-link active" >
+        <li class="nav-item {{  setMenuClass ('admin.habilitations.','menu-open') }}">
+             <a href="" class="nav-link {{  setMenuClass ('admin.habilitations.','active') }}" >
               <i class=" nav-icon fas fa-user-shield"></i>
               <p>
                 Habilitations

@@ -2,12 +2,12 @@
  <div class="row p-4 pt-5">
           <div class="col-12">
             <div class="card">
-              <div class="card-header bg-primary">
-                <h3 class="card-title">Liste des Utilisateurs</h3>
+              <div class="card-header bg-primary d-flex align-items-center">
+                <h3 class="card-title flex-grow-1"><i class="fas fa-users fa-1x"></i> Liste des Utilisateurs</h3>
 
                 <div class="card-tools d-flex align-items-center">
                 <a class="btn btn-link text-white mr-4"><i class ="fas fa-user-plus"></i>Nouvel Utilisateurs</a>
-                  <div class="input-group input-group-sm" style="width: 150px;">
+                  <div class="input-group input-group-md" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                     <div class="input-group-append">

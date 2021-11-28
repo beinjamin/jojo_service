@@ -30,7 +30,10 @@
                     </tr>
                   </thead>
                   <tbody>
+
+
                   @foreach ($users as $user)
+
                     <tr>
                       <td>{{ $user->sexe }}</td>
                       <td>{{ $user->prenom }} {{ $user->nom }}</td>
@@ -41,7 +44,10 @@
                        <button class="btn btn-link"><i class="far fa-trash-alt "></i></button>
                       </td>
                     </tr>
+
                  @endforeach
+
+
                   </tbody>
                 </table>
               </div>

@@ -4,7 +4,6 @@
             <div class="card">
               <div class="card-header bg-primary d-flex align-items-center">
                 <h3 class="card-title flex-grow-1"><i class="fas fa-users fa-1x"></i> Liste des Utilisateurs</h3>
-
                 <div class="card-tools d-flex align-items-center">
                 <a class="btn btn-link text-white mr-4"><i class ="fas fa-user-plus"></i>Nouvel Utilisateurs</a>
                   <div class="input-group input-group-md" style="width: 250px;">
@@ -32,8 +31,6 @@
                   </thead>
                   <tbody>
                   @foreach ($users as $user)
-
-
                     <tr>
                       <td>{{ $user->sexe }}</td>
                       <td>{{ $user->prenom }} {{ $user->nom }}</td>
@@ -44,12 +41,10 @@
                        <button class="btn btn-link"><i class="far fa-trash-alt "></i></button>
                       </td>
                     </tr>
-
                  @endforeach
                   </tbody>
                 </table>
               </div>
-
               <!-- /.card-body -->
               <div class="card-footer">
               </div>

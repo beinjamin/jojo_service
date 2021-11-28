@@ -5,8 +5,8 @@
               <div class="card-header bg-primary">
                 <h3 class="card-title">Liste des Utilisateurs</h3>
 
-                <div class="card-tools">
-                <a class="btn btn-link text-white mr-4">Nouvel Utilisateurs</a>
+                <div class="card-tools d-flex align-items-center">
+                <a class="btn btn-link text-white mr-4"><i class ="fas fa-user-plus"></i>Nouvel Utilisateurs</a>
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 

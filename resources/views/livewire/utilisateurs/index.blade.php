@@ -32,7 +32,9 @@
                   <tbody>
 
 
+
                   @foreach ($users as $user)
+
 
                     <tr>
                       <td>{{ $user->sexe }}</td>
@@ -45,7 +47,9 @@
                       </td>
                     </tr>
 
+
                  @endforeach
+
 
 
                   </tbody>

@@ -23,20 +23,20 @@
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                      <th style="width:10%;">Identifiant</th>
-                      <th style="width:25%;">Utilisateurs</th>
-                      <th style="width:25%;">Roles</th>
-                      <th style="width:30%;">Date de l'Ajout</th>
-                      <th style="width:30%;">Action</th>
+                      <th style="width:10%;" >Identifiant</th>
+                      <th style="width:25%;" >Utilisateurs</th>
+                      <th style="width:25%;" >Roles</th>
+                      <th style="width:30%;" class="text-center">Date de l'Ajout</th>
+                      <th style="width:30%;" class="text-center" >Action</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td>183</td>
                       <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>
+                      <td >11-7-2014</td>
+                      <td class="text-center"><span class="tag tag-success">Approved</span></td>
+                      <td class="text-center">
                       <button class="btn btn-link"><i class="far fa-edit "></i></button>
                        <button class="btn btn-link"><i class="far fa-trash-alt "></i></button>
                       </td>

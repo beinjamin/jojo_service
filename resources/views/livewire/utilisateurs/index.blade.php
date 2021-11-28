@@ -31,16 +31,21 @@
                     </tr>
                   </thead>
                   <tbody>
+                  @foreach ($users as $user)
+
+
                     <tr>
-                      <td>183</td>
-                      <td>John Doe</td>
-                      <td >11-7-2014</td>
+                      <td>{{ $user->sexe }}</td>
+                      <td>{{ $user->prenom }} {{ $user->nom }}</td>
+                      <td>{{ $user->roles}}</td>
                       <td class="text-center"><span class="tag tag-success">Approved</span></td>
                       <td class="text-center">
                       <button class="btn btn-link"><i class="far fa-edit "></i></button>
                        <button class="btn btn-link"><i class="far fa-trash-alt "></i></button>
                       </td>
                     </tr>
+
+                 @endforeach
                   </tbody>
                 </table>
               </div>

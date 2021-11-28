@@ -7,7 +7,7 @@
 
                 <div class="card-tools d-flex align-items-center">
                 <a class="btn btn-link text-white mr-4"><i class ="fas fa-user-plus"></i>Nouvel Utilisateurs</a>
-                  <div class="input-group input-group-md" style="width: 150px;">
+                  <div class="input-group input-group-md" style="width: 250px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
 
                     <div class="input-group-append">
@@ -23,11 +23,11 @@
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th></th>
                       <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
+                      <th>Roles</th>
+                      <th>Date de l'Ajout</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>

@@ -45,8 +45,6 @@
                           <img src="{{ asset ('images/man.png') }}" width="24"/>
                       @endif
 
-
-
                       </td>
                       <td>{{ $user->prenom }} {{ $user->nom }}</td>
                       <td>{{ $user->allRoleNames}}</td>

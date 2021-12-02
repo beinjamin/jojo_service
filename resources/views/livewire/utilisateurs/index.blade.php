@@ -57,6 +57,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
+              {{ $users->link() }}
               </div>
             </div>
             <!-- /.card -->

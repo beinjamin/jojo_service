@@ -8,7 +8,7 @@ use Livewire\WithPagination;
 
 class Utilisateurs extends Component
 {
-    use WithPagination
+    use WithPagination;
     public function render()
     {
         return view('livewire.utilisateurs.index', [

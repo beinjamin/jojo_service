@@ -37,7 +37,17 @@
 
 
                     <tr>
-                      <td>{{ $user->sexe }}</td>
+                      <td>
+                      @if ($iser->sexe == "F")
+                      <img src="{{ asset ('images/woman.png') }}" width="24"/>
+
+                      @else
+                          <img src="{{ asset ('images/man.png') }}" width="24"/>
+                      @endif
+
+
+
+                      </td>
                       <td>{{ $user->prenom }} {{ $user->nom }}</td>
                       <td>{{ $user->allRoleNames}}</td>
                       <td class="text-center"><span class="tag tag-success">{{ $user->created_at->diffForHumans() }}</span></td>

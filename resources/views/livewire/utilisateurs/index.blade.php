@@ -18,14 +18,14 @@
                 </div>
               </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
+              <div class="card-body table-responsive p-0 table-striped" style="height: 300px;">
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
                     <tr>
-                      <th style="width:10%;" >Identifiant</th>
+                      <th style="width:5%;" ></th>
                       <th style="width:25%;" >Utilisateurs</th>
-                      <th style="width:25%;" >Roles</th>
-                      <th style="width:30%;" class="text-center">Date de l'Ajout</th>
+                      <th style="width:20%;" >Roles</th>
+                      <th style="width:20%;" class="text-center">Date de l'Ajout</th>
                       <th style="width:30%;" class="text-center" >Action</th>
                     </tr>
                   </thead>

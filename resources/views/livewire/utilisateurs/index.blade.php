@@ -38,7 +38,7 @@
 
                     <tr>
                       <td>
-                      @if ($iser->sexe == "F")
+                      @if ($user->sexe == "1")
                       <img src="{{ asset ('images/woman.png') }}" width="24"/>
 
                       @else

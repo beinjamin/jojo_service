@@ -4,13 +4,15 @@ namespace App\Http\Livewire;
 
 use App\Models\User;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class Utilisateurs extends Component
 {
+    use WithPagination
     public function render()
     {
         return view('livewire.utilisateurs.index', [
-            "users" => User::paginate(5)
+            "users" => User::paginate(10)
         ])
             ->extends("layouts.master")
             ->section("contenu");

@@ -20,4 +20,7 @@ class Utilisateurs extends Component
             ->extends("layouts.master")
             ->section("contenu");
     }
+    public function goToAddUser()
+    {
+    }
 }

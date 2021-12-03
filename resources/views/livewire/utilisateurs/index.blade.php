@@ -1,4 +1,13 @@
 <div>
+
+@if ($isBtnAddClicked)
+
+@else
+
+
+
+
+
  <div class="row p-4 pt-5">
           <div class="col-12">
             <div class="card">
@@ -73,4 +82,5 @@
             <!-- /.card -->
           </div>
         </div>
+        @endif
 </div>

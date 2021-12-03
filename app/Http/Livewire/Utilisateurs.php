@@ -12,6 +12,7 @@ class Utilisateurs extends Component
 {
     use WithPagination;
     protected $paginationTheme = "bootstrap";
+    public $isbtnAddClicked = false;
     public function render()
     {
         return view('livewire.utilisateurs.index', [
@@ -22,5 +23,6 @@ class Utilisateurs extends Component
     }
     public function goToAddUser()
     {
+        $this->isbtnAddClicked = true;
     }
 }

@@ -23,7 +23,8 @@ class User extends Authenticatable
         'sexe',
         'pieceIdentite',
         'numeroPieceIdentite',
-        'telephone',
+        'telephone1',
+        'telephone2',
         'email',
         'password',
 

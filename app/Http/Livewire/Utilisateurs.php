@@ -11,11 +11,24 @@ use Livewire\WithPagination;
 class Utilisateurs extends Component
 {
     use WithPagination;
+
+
     protected $paginationTheme = "bootstrap";
+
+
     public $isBtnAddClicked = false;
 
+
+
+
     public $newUser = [];
+
+
+
+
     protected $rules = [
+
+
         'newUser.nom' => 'required',
         'newUser.prenom' => 'required',
         'newUser.email' => 'required|email',
@@ -49,7 +62,7 @@ class Utilisateurs extends Component
         //Verification si les formation son correct dans la mesure ou c'est pas le cas cela revoir une erreur
 
 
-
+        $this->validate();
 
 
 

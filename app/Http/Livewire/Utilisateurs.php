@@ -66,9 +66,9 @@ class Utilisateurs extends Component
     {
 
         //Verification si les formation son correct dans la mesure ou c'est pas le cas cela revoir une erreur
+        $validationAttributes = $this->validate();
 
-
-        $this->validate();
+        dump($validationAttributes);
 
 
 

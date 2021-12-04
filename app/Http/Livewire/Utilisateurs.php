@@ -72,6 +72,9 @@ class Utilisateurs extends Component
 
 
 
+
         //Ajout d'un new utilisateur
+
+        $this->newUser = [];
     }
 }

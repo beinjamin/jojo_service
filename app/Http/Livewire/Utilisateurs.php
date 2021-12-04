@@ -76,5 +76,7 @@ class Utilisateurs extends Component
         //Ajout d'un new utilisateur
 
         $this->newUser = [];
+
+        $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "Utilisateur a ete cree avec success"]);
     }
 }

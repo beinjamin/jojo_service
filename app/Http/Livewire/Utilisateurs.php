@@ -35,7 +35,7 @@ class Utilisateurs extends Component
         'newUser.telephone1' => 'required|numeric',
         'newUser.pieceIdentite' => 'required',
         'newUser.sexe' => 'required',
-        'newUser.numeroPieceIdentite' => 'required',
+        'newUser.numeroPieceIdentite' => 'required|unique:users,numeroPieceIdentite',
 
     ];
 

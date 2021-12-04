@@ -15,7 +15,16 @@ class Utilisateurs extends Component
     public $isBtnAddClicked = false;
 
     public $newUser = [];
+    protected $rules = [
+        'newUser.nom' => 'required',
+        'newUser.prenom' => 'required',
+        'newUser.email' => 'required|email',
+        'newUser.telephone1' => 'required|number',
+        'newUser.pieceIdentite' => 'required',
+        'newUser.sexe' => 'required',
+        'newUser.numeroPieceIdentite' => 'required',
 
+    ];
 
 
     public function render()
@@ -36,6 +45,14 @@ class Utilisateurs extends Component
     }
     public function addUser()
     {
-        dump($this->newUser);
+
+        //Verification si les formation son correct dans la mesure ou c'est pas le cas cela revoir une erreur
+
+
+
+
+
+
+        //Ajout d'un new utilisateur
     }
 }

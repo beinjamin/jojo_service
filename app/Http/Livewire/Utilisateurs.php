@@ -40,6 +40,12 @@ class Utilisateurs extends Component
     ];
 
 
+    protected $messages = [
+        'newUser.nom.required' => "le nom de l'utilisateur est oubligatoir",
+
+    ];
+
+
     public function render()
     {
         return view('livewire.utilisateurs.index', [
@@ -64,7 +70,7 @@ class Utilisateurs extends Component
 
         $this->validate();
 
-
+        dump($this->newUser);
 
         //Ajout d'un new utilisateur
     }

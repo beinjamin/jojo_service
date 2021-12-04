@@ -49,7 +49,7 @@ class Utilisateurs extends Component
     public function render()
     {
         return view('livewire.utilisateurs.index', [
-            "users" => User::paginate(10)
+            "users" => User::lastest()->paginate(10)
         ])
             ->extends("layouts.master")
             ->section("contenu");

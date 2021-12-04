@@ -13,6 +13,11 @@ class Utilisateurs extends Component
     use WithPagination;
     protected $paginationTheme = "bootstrap";
     public $isBtnAddClicked = false;
+
+    public $newUser = [];
+
+
+
     public function render()
     {
         return view('livewire.utilisateurs.index', [

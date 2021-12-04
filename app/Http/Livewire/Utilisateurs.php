@@ -31,7 +31,7 @@ class Utilisateurs extends Component
 
         'newUser.nom' => 'required',
         'newUser.prenom' => 'required',
-        'newUser.email' => 'required|email|unique:users',
+        'newUser.email' => 'required|email|unique:users,email',
         'newUser.telephone1' => 'required|numeric',
         'newUser.pieceIdentite' => 'required',
         'newUser.sexe' => 'required',

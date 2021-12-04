@@ -34,4 +34,8 @@ class Utilisateurs extends Component
     {
         $this->isBtnAddClicked = false;
     }
+    public function addUser()
+    {
+        dump($this->newUser);
+    }
 }

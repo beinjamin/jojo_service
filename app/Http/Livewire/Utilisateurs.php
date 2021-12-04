@@ -32,7 +32,7 @@ class Utilisateurs extends Component
         'newUser.nom' => 'required',
         'newUser.prenom' => 'required',
         'newUser.email' => 'required|email',
-        'newUser.telephone1' => 'required|number',
+        'newUser.telephone1' => 'required|numeric',
         'newUser.pieceIdentite' => 'required',
         'newUser.sexe' => 'required',
         'newUser.numeroPieceIdentite' => 'required',
@@ -40,11 +40,11 @@ class Utilisateurs extends Component
     ];
 
 
-    protected $messages = [
+    /* protected $messages = [
         'newUser.nom.required' => "le nom de l'utilisateur est oubligatoir",
 
     ];
-
+ */
 
     public function render()
     {
@@ -70,7 +70,7 @@ class Utilisateurs extends Component
 
         $this->validate();
 
-        dump($this->newUser);
+
 
         //Ajout d'un new utilisateur
     }

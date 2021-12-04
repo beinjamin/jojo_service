@@ -31,7 +31,7 @@ class Utilisateurs extends Component
 
         'newUser.nom' => 'required',
         'newUser.prenom' => 'required',
-        'newUser.email' => 'required|email',
+        'newUser.email' => 'required|email|unique:users',
         'newUser.telephone1' => 'required|numeric',
         'newUser.pieceIdentite' => 'required',
         'newUser.sexe' => 'required',
@@ -67,7 +67,7 @@ class Utilisateurs extends Component
 
         //Verification si les formation son correct dans la mesure ou c'est pas le cas cela revoir une erreur
         $validationAttributes = $this->validate();
-
+        $validationAttributes["newUser"]["password"] = "password";
         User::create($validationAttributes["newUser"]);
 
 

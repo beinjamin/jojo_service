@@ -25,4 +25,8 @@ class Utilisateurs extends Component
     {
         $this->isbtnAddClicked = true;
     }
+    public function goToListUser()
+    {
+        $this->isbtnAddClicked = false;
+    }
 }

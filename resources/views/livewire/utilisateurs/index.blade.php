@@ -1,6 +1,7 @@
 <div>
 
 @if ($isBtnAddClicked)
+@include("livewire.utilisateurs.create")
 
 @else
 

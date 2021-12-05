@@ -61,17 +61,24 @@
         </div>
         <script>
 
-        window.addEventListener("showSuccessMessage", event=>{
+        window.addEventListener("showConfirmMessage", event=>{
             Swal.fire({
-                position:  'top-end',
-                icon: 'succes',
-                toast:true,
-                title: event.detail.message || "Opération effectuéeavec succes",
-                showConfirmButton: false,
-                timer: 3000
-
-            }
-            )
+  title: 'Etes-vous sur de continuer',
+  text: event.detail.message,
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Continuez'
+}).then((result) => {
+  if (result.isConfirmed) {
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
         })
-</script>
+        </script>
 

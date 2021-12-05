@@ -79,4 +79,8 @@ class Utilisateurs extends Component
 
         $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "Utilisateur a ete cree avec success"]);
     }
+    public function confirmDelete($name)
+    {
+        $this->dispatchBrowserEvent("showConfirmMessage", ["message" => $name]);
+    }
 }

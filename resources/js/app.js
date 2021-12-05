@@ -1,5 +1,6 @@
 
 require('./bootstrap');
+window.Swal = require("sweetalert2");
 
 
 import "admin-lte/plugins/jquery/jquery";

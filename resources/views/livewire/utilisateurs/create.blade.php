@@ -119,3 +119,9 @@
 
           </div>
         </div>
+
+        <script>
+        window.addEventListener("showSuccessMessage",event=>{
+        console.log(event)
+        })
+        </script>

@@ -81,6 +81,6 @@ class Utilisateurs extends Component
     }
     public function confirmDelete($name)
     {
-        $this->dispatchBrowserEvent("showConfirmMessage", ["message" => "Vous etez sur le point de supprimer la liste des utilisateur "]);
+        $this->dispatchBrowserEvent("showConfirmMessage", ["message" => "Vous etez sur le point de supprimer $name la liste des utilisateur .voulez vous continuer"]);
     }
 }

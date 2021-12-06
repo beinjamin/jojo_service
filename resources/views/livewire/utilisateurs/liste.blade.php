@@ -72,13 +72,23 @@
   confirmButtonText: 'Continuez'
 }).then((result) => {
   if (result.isConfirmed) {
-    Swal.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-  }
-})
+      @this.deleteUser(event.detail.message.data.user_id)
+
+   }
+  })
+  window.addEventListener("showConfirmMessage", event=>{
+            Swal.fire({
+                position:  'top-end',
+                icon: 'succes',
+                toast:true,
+                title: event.detail.message || "Opération effectuéeavec succes",
+                showConfirmButton: false,
+                timer: 3000
+
+            }
+            )
         })
+})
+
         </script>
 

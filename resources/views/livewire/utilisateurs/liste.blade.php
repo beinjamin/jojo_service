@@ -70,6 +70,7 @@
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',
   confirmButtonText: 'Continuez'
+  cancelButtonText: 'Annuler'
 }).then((result) => {
   if (result.isConfirmed) {
       @this.deleteUser(event.detail.message.data.user_id)

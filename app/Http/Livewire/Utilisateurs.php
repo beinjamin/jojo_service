@@ -49,7 +49,7 @@ class Utilisateurs extends Component
     public function render()
     {
         return view('livewire.utilisateurs.index', [
-            "users" => User::lastest()->paginate(10)
+            "users" => User::latest()->paginate(10)
         ])
             ->extends("layouts.master")
             ->section("contenu");
@@ -78,5 +78,16 @@ class Utilisateurs extends Component
         $this->newUser = [];
 
         $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "Utilisateur a ete cree avec success"]);
+    }
+    public function confirmDelete($name, $id)
+    {
+        $this->dispatchBrowserEvent("showConfirmMessage", ["message" => [
+            "text" => "Vous êtes sur le point de supprimer $name de la liste des utilisateurs. Voulez-vous continuer?",
+            "title" => "Êtes-vous sûr de continuer?",
+            "type" => "warning",
+            "data" => [
+                "user_id" => $id
+            ]
+        ]]);
     }
 }

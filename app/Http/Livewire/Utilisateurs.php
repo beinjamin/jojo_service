@@ -90,4 +90,9 @@ class Utilisateurs extends Component
             ]
         ]]);
     }
+    public function deleteUser($id)
+    {
+        User::destory($id);
+        $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "utilisateur cree avec succes!"]);
+    }
 }

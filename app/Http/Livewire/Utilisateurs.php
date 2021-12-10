@@ -16,9 +16,8 @@ class Utilisateurs extends Component
     protected $paginationTheme = "bootstrap";
 
 
-    public $isBtnAddClicked = false;
 
-    public $currentPage = "liste";
+    public $currentPage = "PAGELIST";
 
 
 
@@ -59,11 +58,26 @@ class Utilisateurs extends Component
     }
     public function goToAddUser()
     {
-        $this->isBtnAddClicked = true;
+        $this->currentPage = PAGECREATEFORM;
     }
+
+    public function goToEditUser($id)
+    {
+        $this->editUser = User::find($id)->toArray();
+        $this->currentPage = PAGEEDITFORM;
+
+        $this->populateRolePermissions();
+    }
+
+
+
+
+
+
     public function goToListUser()
     {
-        $this->isBtnAddClicked = false;
+        $this->currentPage = PAGELIST;
+        $this->editUser = [];
     }
     public function addUser()
     {
@@ -81,6 +95,17 @@ class Utilisateurs extends Component
         $this->newUser = [];
 
         $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "Utilisateur a ete cree avec success"]);
+    }
+
+    public function updateUser()
+    {
+        // Vérifier que les informations envoyées par le formulaire sont correctes
+        $validationAttributes = $this->validate();
+
+
+        User::find($this->editUser["id"])->update($validationAttributes["editUser"]);
+
+        $this->dispatchBrowserEvent("showSuccessMessage", ["message" => "Utilisateur mis à jour avec succès!"]);
     }
     public function confirmDelete($name, $id)
     {

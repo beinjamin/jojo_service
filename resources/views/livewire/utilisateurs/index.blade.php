@@ -1,9 +1,18 @@
-<div>
+<div wire:ignore.self>
 
-    @if ($isBtnAddClicked)
-    @include("livewire.utilisateurs.create")
+    @if($currentPage == PAGECREATEFORM)
+         @include("livewire.utilisateurs.create")
+    @endif
 
-    @else
-    @include("livewire.utilisateurs.liste")
-        @endif
+    @if($currentPage == PAGEEDITFORM)
+        @include("livewire.utilisateurs.edit")
+    @endif
+
+    @if($currentPage == PAGELIST)
+        @include("livewire.utilisateurs.liste")
+    @endif
+
 </div>
+
+
+

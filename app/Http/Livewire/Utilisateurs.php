@@ -18,6 +18,8 @@ class Utilisateurs extends Component
 
     public $isBtnAddClicked = false;
 
+    public $currentPage = "liste";
+
 
 
 

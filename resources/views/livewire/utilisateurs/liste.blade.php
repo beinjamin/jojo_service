@@ -63,9 +63,9 @@
 
         window.addEventListener("showConfirmMessage", event=>{
             Swal.fire({
-  title: 'Etes-vous sur de continuer',
+  title: event.detail.message.title,
   text: event.detail.message,
-  icon: 'warning',
+  icon: event.detail.message.type,
   showCancelButton: true,
   confirmButtonColor: '#3085d6',
   cancelButtonColor: '#d33',

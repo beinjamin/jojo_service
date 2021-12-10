@@ -22,6 +22,7 @@ class Utilisateurs extends Component
 
 
     public $newUser = [];
+    public $editUser = [];
 
 
 
